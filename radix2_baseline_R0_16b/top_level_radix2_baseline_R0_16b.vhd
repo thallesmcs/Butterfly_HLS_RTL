@@ -1,0 +1,116 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity top_level_radix2_baseline_R0_16b is
+    port (
+        clk    : in  std_logic;
+        ap_rst : in  std_logic;
+        Ar     : in  std_logic_vector(15 downto 0);
+        Ai     : in  std_logic_vector(15 downto 0);
+        Br     : in  std_logic_vector(15 downto 0);
+        Bi     : in  std_logic_vector(15 downto 0);
+        Wr     : in  std_logic_vector(15 downto 0);
+        Wi     : in  std_logic_vector(15 downto 0);
+        Cr     : out std_logic_vector(15 downto 0);
+        Ci     : out std_logic_vector(15 downto 0);
+        Dr     : out std_logic_vector(15 downto 0);
+        Di     : out std_logic_vector(15 downto 0)
+    );
+end entity;
+
+architecture Behavioral of top_level_radix2_baseline_R0_16b is
+
+    component radix2_baseline_R0_16b is
+        port (
+            Ar     : in  std_logic_vector(15 downto 0);
+            Ai     : in  std_logic_vector(15 downto 0);
+            Br     : in  std_logic_vector(15 downto 0);
+            Bi     : in  std_logic_vector(15 downto 0);
+            Wr     : in  std_logic_vector(15 downto 0);
+            Wi     : in  std_logic_vector(15 downto 0);
+            Cr     : out std_logic_vector(15 downto 0);
+            Dr     : out std_logic_vector(15 downto 0);
+            Ci     : out std_logic_vector(15 downto 0);
+            Di     : out std_logic_vector(15 downto 0);
+        );
+    end component;
+
+    component FF_D16 is
+        port (
+            clk   : in  std_logic;
+            rst_n : in  std_logic;
+            d     : in  std_logic_vector(15 downto 0);
+            q     : out std_logic_vector(15 downto 0)
+        );
+    end component;
+
+    signal rst_n  : std_logic;
+    signal ar_reg : std_logic_vector(15 downto 0);
+    signal ai_reg : std_logic_vector(15 downto 0);
+    signal br_reg : std_logic_vector(15 downto 0);
+    signal bi_reg : std_logic_vector(15 downto 0);
+    signal wr_reg : std_logic_vector(15 downto 0);
+    signal wi_reg : std_logic_vector(15 downto 0);
+    signal cr_raw : std_logic_vector(15 downto 0);
+    signal ci_raw : std_logic_vector(15 downto 0);
+    signal dr_raw : std_logic_vector(15 downto 0);
+    signal di_raw : std_logic_vector(15 downto 0);
+    signal cr_reg : std_logic_vector(15 downto 0);
+    signal ci_reg : std_logic_vector(15 downto 0);
+    signal dr_reg : std_logic_vector(15 downto 0);
+    signal di_reg : std_logic_vector(15 downto 0);
+
+begin
+
+    rst_n <= not ap_rst;
+
+    ff_ar : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Ar, q => ar_reg);
+
+    ff_ai : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Ai, q => ai_reg);
+
+    ff_br : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Br, q => br_reg);
+
+    ff_bi : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Bi, q => bi_reg);
+
+    ff_wr : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Wr, q => wr_reg);
+
+    ff_wi : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => Wi, q => wi_reg);
+
+    u_radix2 : radix2_baseline_R0_16b
+        port map (
+            Ar => ar_reg,
+            Ai => ai_reg,
+            Br => br_reg,
+            Bi => bi_reg,
+            Wr => wr_reg,
+            Wi => wi_reg,
+            Cr => cr_raw,
+            Dr => dr_raw,
+            Ci => ci_raw,
+            Di => di_raw
+        );
+
+    ff_cr : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => cr_raw, q => cr_reg);
+
+    ff_ci : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => ci_raw, q => ci_reg);
+
+    ff_dr : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => dr_raw, q => dr_reg);
+
+    ff_di : FF_D16
+        port map (clk => clk, rst_n => rst_n, d => di_raw, q => di_reg);
+
+    Cr <= cr_reg;
+    Ci <= ci_reg;
+    Dr <= dr_reg;
+    Di <= di_reg;
+
+end Behavioral;

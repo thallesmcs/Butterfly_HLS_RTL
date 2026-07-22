@@ -9,7 +9,6 @@ clk => FF_D16:ff_cr.clk
 clk => FF_D16:ff_ci.clk
 clk => FF_D16:ff_dr.clk
 clk => FF_D16:ff_di.clk
-ap_rst => radix2_baseline:u_radix2.ap_rst
 ap_rst => FF_D16:ff_ar.rst_n
 ap_rst => FF_D16:ff_ai.rst_n
 ap_rst => FF_D16:ff_br.rst_n

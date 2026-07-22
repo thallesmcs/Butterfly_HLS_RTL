@@ -1,0 +1,131 @@
+Flow report for Compressor_42_Logic
+Wed Jul 22 18:40:36 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Jul 22 18:40:30 2026           ;
+; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                   ; Compressor_42_Logic                             ;
+; Top-level Entity Name           ; top_level_compressor_42_16bits                  ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CGXFC7C7F23C8                                  ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 44 / 56,480 ( < 1 % )                           ;
+; Total registers                 ; 82                                              ;
+; Total pins                      ; 84 / 268 ( 31 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 156 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                                   ;
+; Total PLLs                      ; 0 / 13 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/22/2026 18:39:43 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Compressor_42_Logic ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                        ;
++-------------------------------------+----------------------------------------+---------------------+--------------------------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name                    ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------------+--------------------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 79951358476627.178475638316640         ; --                  ; --                             ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                  ; --                             ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                  ; --                             ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                  ; --                             ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                  ; --                             ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --                  ; --                             ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (Verilog)            ; <None>              ; --                             ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --                  ; --                             ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --                             ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --                             ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                  ; top_level_compressor_42_16bits ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                  ; top_level_compressor_42_16bits ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                  ; top_level_compressor_42_16bits ; Top                               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                  ; --                             ; --                                ;
+; TOP_LEVEL_ENTITY                    ; top_level_compressor_42_16bits         ; Compressor_42_Logic ; --                             ; --                                ;
++-------------------------------------+----------------------------------------+---------------------+--------------------------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4904 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:39     ; 1.0                     ; 7163 MB             ; 00:01:42                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5247 MB             ; 00:00:04                           ;
+; Total                ; 00:00:51     ; --                      ; --                  ; 00:02:03                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-8L9PMU5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-8L9PMU5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-8L9PMU5  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Compressor_42_Logic -c Compressor_42_Logic
+quartus_fit --read_settings_files=off --write_settings_files=off Compressor_42_Logic -c Compressor_42_Logic
+quartus_sta Compressor_42_Logic -c Compressor_42_Logic
+
+
+

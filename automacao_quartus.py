@@ -12,6 +12,13 @@ def extrair_dados_quartus(caminho_pasta, nome_design):
     """
     Lê os arquivos .fit.summary e .sta.rpt para extrair os dados reais.
     """
+
+    def _parse_int(valor):
+        # Remove separadores de milhar como ',' ou '.' antes de converter
+        if not valor:
+            return None
+        digitos = re.sub(r"[^0-9]", "", valor)
+        return int(digitos) if digitos else None
     
     arquivo_fit = os.path.join(caminho_pasta, f"{nome_design}.fit.summary")
     arquivo_sta = os.path.join(caminho_pasta, f"{nome_design}.sta.rpt")
@@ -19,7 +26,10 @@ def extrair_dados_quartus(caminho_pasta, nome_design):
     dados = {
         "design": nome_design,
         "pasta": os.path.relpath(caminho_pasta), # Mostra onde achou
-        "les": "N/A",
+        "logic_util": "N/A",
+        "registers": "N/A",
+        "pins": "N/A",
+        "dsp_blocks": "N/A",
         "fmax": "N/A",
         "status": "OK"
     }
@@ -31,14 +41,36 @@ def extrair_dados_quartus(caminho_pasta, nome_design):
                 content = f.read()
             
             # Tenta pegar Logic Elements
-            match = re.search(r"Total logic elements.*?\s(\d+)\s+/", content)
+            match = re.search(r"Total logic elements.*?:\s*([0-9,\.]+)\s*/", content)
             if match:
-                dados["les"] = int(match.group(1))
+                valor = _parse_int(match.group(1))
+                if valor is not None:
+                    dados["logic_util"] = valor
             else:
                 # Tenta pegar ALMs (para Cyclone V ou mais novos)
-                match_alm = re.search(r"Logic utilization.*?\s(\d+)\s+/", content)
+                match_alm = re.search(r"Logic utilization.*?:\s*([0-9,\.]+)\s*/", content)
                 if match_alm:
-                     dados["les"] = f"{match_alm.group(1)} (ALMs)"
+                    valor = _parse_int(match_alm.group(1))
+                    if valor is not None:
+                        dados["logic_util"] = f"{valor} (ALMs)"
+
+            match_regs = re.search(r"Total registers\s*:\s*([0-9,\.]+)", content)
+            if match_regs:
+                valor = _parse_int(match_regs.group(1))
+                if valor is not None:
+                    dados["registers"] = valor
+
+            match_pins = re.search(r"Total pins\s*:\s*([0-9,\.]+)\s*/", content)
+            if match_pins:
+                valor = _parse_int(match_pins.group(1))
+                if valor is not None:
+                    dados["pins"] = valor
+
+            match_dsp = re.search(r"Total DSP Blocks\s*:\s*([0-9,\.]+)\s*/", content)
+            if match_dsp:
+                valor = _parse_int(match_dsp.group(1))
+                if valor is not None:
+                    dados["dsp_blocks"] = valor
         except Exception as e:
             dados["status"] = f"Erro leitura FIT"
     else:
@@ -105,7 +137,10 @@ def main():
     # --- CONFIGURAÇÃO DE LARGURAS ---
     # Definindo larguras fixas para garantir que Cabeçalho e Linhas batam exatamente
     W_DESIGN = 45
-    W_LES = 8
+    W_LOGIC = 24
+    W_REGS = 12
+    W_PINS = 10
+    W_DSP = 10
     W_FMAX = 12
     W_PASTA = 60  # Aumentei um pouco para caber caminhos melhores
     W_STATUS = 10 # Tamanho fixo para o status
@@ -114,7 +149,10 @@ def main():
     # O segredo é usar o mesmo número (ex: :<30) no cabeçalho e no loop
     header = (
         f"{'DESIGN':<{W_DESIGN}} | "
-        f"{'LEs':<{W_LES}} | "
+        f"{'Total Logic Utilization':<{W_LOGIC}} | "
+        f"{'Total Registers':<{W_REGS}} | "
+        f"{'Total Pins':<{W_PINS}} | "
+        f"{'DSP Blocks':<{W_DSP}} | "
         f"{'FMAX (85C)':<{W_FMAX}} | "
         f"{'PASTA':<{W_PASTA}} | "
         f"{'STATUS':<{W_STATUS}}"
@@ -137,14 +175,20 @@ def main():
             pasta_str = '...' + pasta_str[-(W_PASTA-3):] 
 
         # 3. Status e Conversões
-        les_str = str(item['les'])
+        logic_str = str(item['logic_util'])
+        regs_str = str(item['registers'])
+        pins_str = str(item['pins'])
+        dsp_str = str(item['dsp_blocks'])
         fmax_str = str(item['fmax'])
         status_str = item['status']
 
         # 4. Print com as MESMAS larguras do cabeçalho
         print(
             f"{design_str:<{W_DESIGN}} | "
-            f"{les_str:<{W_LES}} | "
+            f"{logic_str:<{W_LOGIC}} | "
+            f"{regs_str:<{W_REGS}} | "
+            f"{pins_str:<{W_PINS}} | "
+            f"{dsp_str:<{W_DSP}} | "
             f"{fmax_str:<{W_FMAX}} | "
             f"{pasta_str:<{W_PASTA}} | "
             f"{status_str:<{W_STATUS}}" # Aqui garante que o OK fique alinhado com STATUS
@@ -154,7 +198,16 @@ def main():
     try:
         with open(NOME_CSV, mode='w', newline='', encoding='utf-8') as csv_file:
             # Definindo as colunas
-            colunas = ['DESIGN', 'LEs', 'FMAX (85C)', 'PASTA', 'STATUS']
+            colunas = [
+                'DESIGN',
+                'Total Logic Utilization',
+                'Total Registers',
+                'Total Pins',
+                'DSP Blocks',
+                'FMAX (85C)',
+                'PASTA',
+                'STATUS'
+            ]
             writer = csv.writer(csv_file)
             
             # Escreve o cabeçalho
@@ -164,7 +217,10 @@ def main():
             for item in resultados:
                 writer.writerow([
                     item['design'], 
-                    item['les'], 
+                    item['logic_util'], 
+                    item['registers'],
+                    item['pins'],
+                    item['dsp_blocks'],
                     item['fmax'], 
                     item['pasta'], 
                     item['status']

@@ -1,4 +1,9 @@
-DESIGN,LEs,FMAX (85C),PASTA,STATUS
-Borboleta_ferreirinha_Compressor,228 (ALMs),80.98,Borboleta_ferreirinha_Compressor\output_files,OK
-radix2_baseline,49 (ALMs),96.03,radix2_baseline\output_files,OK
-radix2_baseline_compressor,207 (ALMs),82.3,radix2_baseline_compressor\output_files,OK
+DESIGN,Total Logic Utilization,Total Registers,Total Pins,DSP Blocks,FMAX (85C),PASTA,STATUS
+Borboleta_ferreirinha_Compressor,228 (ALMs),96,162,4,80.98,Borboleta_ferreirinha_Compressor\output_files,OK
+Compressor_42_Logic,44 (ALMs),82,84,0,178.92,Compressor_42_Logic\output_files,OK
+radix2_baseline,49 (ALMs),96,162,4,96.03,radix2_baseline\output_files,OK
+radix2_baseline_compressor,207 (ALMs),96,162,4,82.3,radix2_baseline_compressor\output_files,OK
+radix2_baseline_R0_16b,49 (ALMs),96,162,4,96.03,radix2_baseline_R0_16b\output_files,OK
+radix2_R0,49 (ALMs),96,162,4,96.03,radix2_R0\output_files,OK
+radix2_R1_V0,49 (ALMs),96,162,3,82.9,radix2_R1_V0\output_files,OK
+radix2_R1_V1,49 (ALMs),96,162,3,82.9,radix2_R1_V1\output_files,OK

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Jul 22 18:39:50 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : Compressor_42_Logic
+Top-level Entity Name : top_level_compressor_42_16bits
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 82
+Total pins : 84
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

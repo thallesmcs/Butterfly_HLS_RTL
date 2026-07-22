@@ -31,8 +31,7 @@ architecture Behavioral of top_level_radix2_baseline is
             Cr     : out std_logic_vector(15 downto 0);
             Dr     : out std_logic_vector(15 downto 0);
             Ci     : out std_logic_vector(15 downto 0);
-            Di     : out std_logic_vector(15 downto 0);
-            ap_rst : in  std_logic
+            Di     : out std_logic_vector(15 downto 0)
         );
     end component;
 
@@ -94,8 +93,7 @@ begin
             Cr => cr_raw,
             Dr => dr_raw,
             Ci => ci_raw,
-            Di => di_raw,
-            ap_rst => ap_rst
+            Di => di_raw
         );
 
     ff_cr : FF_D16

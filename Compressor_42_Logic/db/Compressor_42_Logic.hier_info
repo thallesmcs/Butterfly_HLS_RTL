@@ -1,0 +1,1169 @@
+|top_level_compressor_42_16bits
+clk => FF_D16:ff_a.clk
+clk => FF_D16:ff_b.clk
+clk => FF_D16:ff_c.clk
+clk => FF_D16:ff_d.clk
+clk => FF_D18:ff_soma.clk
+ap_rst => FF_D16:ff_a.rst_n
+ap_rst => FF_D16:ff_b.rst_n
+ap_rst => FF_D16:ff_c.rst_n
+ap_rst => FF_D16:ff_d.rst_n
+ap_rst => FF_D18:ff_soma.rst_n
+A[0] => FF_D16:ff_a.d[0]
+A[1] => FF_D16:ff_a.d[1]
+A[2] => FF_D16:ff_a.d[2]
+A[3] => FF_D16:ff_a.d[3]
+A[4] => FF_D16:ff_a.d[4]
+A[5] => FF_D16:ff_a.d[5]
+A[6] => FF_D16:ff_a.d[6]
+A[7] => FF_D16:ff_a.d[7]
+A[8] => FF_D16:ff_a.d[8]
+A[9] => FF_D16:ff_a.d[9]
+A[10] => FF_D16:ff_a.d[10]
+A[11] => FF_D16:ff_a.d[11]
+A[12] => FF_D16:ff_a.d[12]
+A[13] => FF_D16:ff_a.d[13]
+A[14] => FF_D16:ff_a.d[14]
+A[15] => FF_D16:ff_a.d[15]
+B[0] => FF_D16:ff_b.d[0]
+B[1] => FF_D16:ff_b.d[1]
+B[2] => FF_D16:ff_b.d[2]
+B[3] => FF_D16:ff_b.d[3]
+B[4] => FF_D16:ff_b.d[4]
+B[5] => FF_D16:ff_b.d[5]
+B[6] => FF_D16:ff_b.d[6]
+B[7] => FF_D16:ff_b.d[7]
+B[8] => FF_D16:ff_b.d[8]
+B[9] => FF_D16:ff_b.d[9]
+B[10] => FF_D16:ff_b.d[10]
+B[11] => FF_D16:ff_b.d[11]
+B[12] => FF_D16:ff_b.d[12]
+B[13] => FF_D16:ff_b.d[13]
+B[14] => FF_D16:ff_b.d[14]
+B[15] => FF_D16:ff_b.d[15]
+C[0] => FF_D16:ff_c.d[0]
+C[1] => FF_D16:ff_c.d[1]
+C[2] => FF_D16:ff_c.d[2]
+C[3] => FF_D16:ff_c.d[3]
+C[4] => FF_D16:ff_c.d[4]
+C[5] => FF_D16:ff_c.d[5]
+C[6] => FF_D16:ff_c.d[6]
+C[7] => FF_D16:ff_c.d[7]
+C[8] => FF_D16:ff_c.d[8]
+C[9] => FF_D16:ff_c.d[9]
+C[10] => FF_D16:ff_c.d[10]
+C[11] => FF_D16:ff_c.d[11]
+C[12] => FF_D16:ff_c.d[12]
+C[13] => FF_D16:ff_c.d[13]
+C[14] => FF_D16:ff_c.d[14]
+C[15] => FF_D16:ff_c.d[15]
+D[0] => FF_D16:ff_d.d[0]
+D[1] => FF_D16:ff_d.d[1]
+D[2] => FF_D16:ff_d.d[2]
+D[3] => FF_D16:ff_d.d[3]
+D[4] => FF_D16:ff_d.d[4]
+D[5] => FF_D16:ff_d.d[5]
+D[6] => FF_D16:ff_d.d[6]
+D[7] => FF_D16:ff_d.d[7]
+D[8] => FF_D16:ff_d.d[8]
+D[9] => FF_D16:ff_d.d[9]
+D[10] => FF_D16:ff_d.d[10]
+D[11] => FF_D16:ff_d.d[11]
+D[12] => FF_D16:ff_d.d[12]
+D[13] => FF_D16:ff_d.d[13]
+D[14] => FF_D16:ff_d.d[14]
+D[15] => FF_D16:ff_d.d[15]
+SOMA[0] <= FF_D18:ff_soma.q[0]
+SOMA[1] <= FF_D18:ff_soma.q[1]
+SOMA[2] <= FF_D18:ff_soma.q[2]
+SOMA[3] <= FF_D18:ff_soma.q[3]
+SOMA[4] <= FF_D18:ff_soma.q[4]
+SOMA[5] <= FF_D18:ff_soma.q[5]
+SOMA[6] <= FF_D18:ff_soma.q[6]
+SOMA[7] <= FF_D18:ff_soma.q[7]
+SOMA[8] <= FF_D18:ff_soma.q[8]
+SOMA[9] <= FF_D18:ff_soma.q[9]
+SOMA[10] <= FF_D18:ff_soma.q[10]
+SOMA[11] <= FF_D18:ff_soma.q[11]
+SOMA[12] <= FF_D18:ff_soma.q[12]
+SOMA[13] <= FF_D18:ff_soma.q[13]
+SOMA[14] <= FF_D18:ff_soma.q[14]
+SOMA[15] <= FF_D18:ff_soma.q[15]
+SOMA[16] <= FF_D18:ff_soma.q[16]
+SOMA[17] <= FF_D18:ff_soma.q[17]
+
+
+|top_level_compressor_42_16bits|FF_D16:ff_a
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+rst_n => q[0]~reg0.ACLR
+rst_n => q[1]~reg0.ACLR
+rst_n => q[2]~reg0.ACLR
+rst_n => q[3]~reg0.ACLR
+rst_n => q[4]~reg0.ACLR
+rst_n => q[5]~reg0.ACLR
+rst_n => q[6]~reg0.ACLR
+rst_n => q[7]~reg0.ACLR
+rst_n => q[8]~reg0.ACLR
+rst_n => q[9]~reg0.ACLR
+rst_n => q[10]~reg0.ACLR
+rst_n => q[11]~reg0.ACLR
+rst_n => q[12]~reg0.ACLR
+rst_n => q[13]~reg0.ACLR
+rst_n => q[14]~reg0.ACLR
+rst_n => q[15]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|FF_D16:ff_b
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+rst_n => q[0]~reg0.ACLR
+rst_n => q[1]~reg0.ACLR
+rst_n => q[2]~reg0.ACLR
+rst_n => q[3]~reg0.ACLR
+rst_n => q[4]~reg0.ACLR
+rst_n => q[5]~reg0.ACLR
+rst_n => q[6]~reg0.ACLR
+rst_n => q[7]~reg0.ACLR
+rst_n => q[8]~reg0.ACLR
+rst_n => q[9]~reg0.ACLR
+rst_n => q[10]~reg0.ACLR
+rst_n => q[11]~reg0.ACLR
+rst_n => q[12]~reg0.ACLR
+rst_n => q[13]~reg0.ACLR
+rst_n => q[14]~reg0.ACLR
+rst_n => q[15]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|FF_D16:ff_c
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+rst_n => q[0]~reg0.ACLR
+rst_n => q[1]~reg0.ACLR
+rst_n => q[2]~reg0.ACLR
+rst_n => q[3]~reg0.ACLR
+rst_n => q[4]~reg0.ACLR
+rst_n => q[5]~reg0.ACLR
+rst_n => q[6]~reg0.ACLR
+rst_n => q[7]~reg0.ACLR
+rst_n => q[8]~reg0.ACLR
+rst_n => q[9]~reg0.ACLR
+rst_n => q[10]~reg0.ACLR
+rst_n => q[11]~reg0.ACLR
+rst_n => q[12]~reg0.ACLR
+rst_n => q[13]~reg0.ACLR
+rst_n => q[14]~reg0.ACLR
+rst_n => q[15]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|FF_D16:ff_d
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+rst_n => q[0]~reg0.ACLR
+rst_n => q[1]~reg0.ACLR
+rst_n => q[2]~reg0.ACLR
+rst_n => q[3]~reg0.ACLR
+rst_n => q[4]~reg0.ACLR
+rst_n => q[5]~reg0.ACLR
+rst_n => q[6]~reg0.ACLR
+rst_n => q[7]~reg0.ACLR
+rst_n => q[8]~reg0.ACLR
+rst_n => q[9]~reg0.ACLR
+rst_n => q[10]~reg0.ACLR
+rst_n => q[11]~reg0.ACLR
+rst_n => q[12]~reg0.ACLR
+rst_n => q[13]~reg0.ACLR
+rst_n => q[14]~reg0.ACLR
+rst_n => q[15]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor
+A[0] => compressor_4entradas:comp42_num0.A
+A[1] => compressor_4entradas:comp42_num1.A
+A[2] => compressor_4entradas:comp42_num2.A
+A[3] => compressor_4entradas:comp42_num3.A
+A[4] => compressor_4entradas:comp42_num4.A
+A[5] => compressor_4entradas:comp42_num5.A
+A[6] => compressor_4entradas:comp42_num6.A
+A[7] => compressor_4entradas:comp42_num7.A
+A[8] => compressor_4entradas:comp42_num8.A
+A[9] => compressor_4entradas:comp42_num9.A
+A[10] => compressor_4entradas:comp42_num10.A
+A[11] => compressor_4entradas:comp42_num11.A
+A[12] => compressor_4entradas:comp42_num12.A
+A[13] => compressor_4entradas:comp42_num13.A
+A[14] => compressor_4entradas:comp42_num14.A
+A[15] => encoder:var14.A
+B[0] => compressor_4entradas:comp42_num0.B
+B[1] => compressor_4entradas:comp42_num1.B
+B[2] => compressor_4entradas:comp42_num2.B
+B[3] => compressor_4entradas:comp42_num3.B
+B[4] => compressor_4entradas:comp42_num4.B
+B[5] => compressor_4entradas:comp42_num5.B
+B[6] => compressor_4entradas:comp42_num6.B
+B[7] => compressor_4entradas:comp42_num7.B
+B[8] => compressor_4entradas:comp42_num8.B
+B[9] => compressor_4entradas:comp42_num9.B
+B[10] => compressor_4entradas:comp42_num10.B
+B[11] => compressor_4entradas:comp42_num11.B
+B[12] => compressor_4entradas:comp42_num12.B
+B[13] => compressor_4entradas:comp42_num13.B
+B[14] => compressor_4entradas:comp42_num14.B
+B[15] => encoder:var14.B
+C[0] => compressor_4entradas:comp42_num0.C
+C[1] => compressor_4entradas:comp42_num1.C
+C[2] => compressor_4entradas:comp42_num2.C
+C[3] => compressor_4entradas:comp42_num3.C
+C[4] => compressor_4entradas:comp42_num4.C
+C[5] => compressor_4entradas:comp42_num5.C
+C[6] => compressor_4entradas:comp42_num6.C
+C[7] => compressor_4entradas:comp42_num7.C
+C[8] => compressor_4entradas:comp42_num8.C
+C[9] => compressor_4entradas:comp42_num9.C
+C[10] => compressor_4entradas:comp42_num10.C
+C[11] => compressor_4entradas:comp42_num11.C
+C[12] => compressor_4entradas:comp42_num12.C
+C[13] => compressor_4entradas:comp42_num13.C
+C[14] => compressor_4entradas:comp42_num14.C
+C[15] => encoder:var14.C
+D[0] => compressor_4entradas:comp42_num0.D
+D[1] => compressor_4entradas:comp42_num1.D
+D[2] => compressor_4entradas:comp42_num2.D
+D[3] => compressor_4entradas:comp42_num3.D
+D[4] => compressor_4entradas:comp42_num4.D
+D[5] => compressor_4entradas:comp42_num5.D
+D[6] => compressor_4entradas:comp42_num6.D
+D[7] => compressor_4entradas:comp42_num7.D
+D[8] => compressor_4entradas:comp42_num8.D
+D[9] => compressor_4entradas:comp42_num9.D
+D[10] => compressor_4entradas:comp42_num10.D
+D[11] => compressor_4entradas:comp42_num11.D
+D[12] => compressor_4entradas:comp42_num12.D
+D[13] => compressor_4entradas:comp42_num13.D
+D[14] => compressor_4entradas:comp42_num14.D
+D[15] => encoder:var14.D
+SOMA[0] <= compressor_4entradas:comp42_num0.Sum
+SOMA[1] <= HALF_ADDER:var0.S
+SOMA[2] <= FULL_ADDER:var1.S
+SOMA[3] <= FULL_ADDER:var2.S
+SOMA[4] <= FULL_ADDER:var3.S
+SOMA[5] <= FULL_ADDER:var4.S
+SOMA[6] <= FULL_ADDER:var5.S
+SOMA[7] <= FULL_ADDER:var6.S
+SOMA[8] <= FULL_ADDER:var7.S
+SOMA[9] <= FULL_ADDER:var8.S
+SOMA[10] <= FULL_ADDER:var9.S
+SOMA[11] <= FULL_ADDER:var10.S
+SOMA[12] <= FULL_ADDER:var11.S
+SOMA[13] <= FULL_ADDER:var12.S
+SOMA[14] <= FULL_ADDER:var13.S
+SOMA[15] <= somador3_2:var16.S0
+SOMA[16] <= somador3_2:var16.S1
+SOMA[17] <= somador3_2:var16.S2
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num0
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num0|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num0|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num1
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num1|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num1|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num2
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num2|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num2|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num3
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num3|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num3|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num4
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num4|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num4|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num5
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num5|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num5|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num6
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num6|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num6|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num7
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num7|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num7|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num8
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num8|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num8|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num9
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num9|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num9|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num10
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num10|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num10|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num11
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num11|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num11|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num12
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num12|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num12|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num13
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num13|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num13|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num14
+A => out_xor1.IN0
+A => mux_1bit:s0.a
+B => out_xor1.IN1
+C => out_xor2.IN0
+C => mux_1bit:s0.b
+D => out_xor2.IN1
+D => mux_1bit:s1.a
+Cin => out_xor4.IN1
+Cin => mux_1bit:s1.b
+Cout <= mux_1bit:s0.mux_out
+Carry <= mux_1bit:s1.mux_out
+Sum <= out_xor4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num14|mux_1bit:s0
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|compressor_4entradas:comp42_num14|mux_1bit:s1
+a => mux_out.DATAB
+b => mux_out.DATAA
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+sel => mux_out.OUTPUTSELECT
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|HALF_ADDER:var0
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var1
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var2
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var3
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var4
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var5
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var6
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var7
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var8
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var9
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var10
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var11
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var12
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var13
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|encoder:var14
+A => i1.IN0
+A => i3.IN0
+B => i1.IN1
+B => i3.IN1
+B => i5.IN1
+C => i2.IN0
+C => i4.IN0
+C => i6.IN0
+D => i2.IN1
+D => i4.IN1
+D => i6.IN1
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|FULL_ADDER:var15
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|somador3_2:var16
+A2 => S2.IN1
+A1 => FULL_ADDER:label_2.A
+A0 => HALF_ADDER:label_1.A
+B1 => FULL_ADDER:label_2.B
+B0 => HALF_ADDER:label_1.B
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= FULL_ADDER:label_2.S
+S0 <= HALF_ADDER:label_1.S
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|somador3_2:var16|HALF_ADDER:label_1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|compressor_42_16bits:u_compressor|somador3_2:var16|FULL_ADDER:label_2
+CIN => S.IN1
+CIN => fio3.IN1
+A => fio1.IN0
+A => fio2.IN0
+B => fio1.IN1
+B => fio2.IN1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level_compressor_42_16bits|FF_D18:ff_soma
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+clk => q[16]~reg0.CLK
+clk => q[17]~reg0.CLK
+rst_n => q[0]~reg0.ACLR
+rst_n => q[1]~reg0.ACLR
+rst_n => q[2]~reg0.ACLR
+rst_n => q[3]~reg0.ACLR
+rst_n => q[4]~reg0.ACLR
+rst_n => q[5]~reg0.ACLR
+rst_n => q[6]~reg0.ACLR
+rst_n => q[7]~reg0.ACLR
+rst_n => q[8]~reg0.ACLR
+rst_n => q[9]~reg0.ACLR
+rst_n => q[10]~reg0.ACLR
+rst_n => q[11]~reg0.ACLR
+rst_n => q[12]~reg0.ACLR
+rst_n => q[13]~reg0.ACLR
+rst_n => q[14]~reg0.ACLR
+rst_n => q[15]~reg0.ACLR
+rst_n => q[16]~reg0.ACLR
+rst_n => q[17]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+d[16] => q[16]~reg0.DATAIN
+d[17] => q[17]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= q[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= q[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
